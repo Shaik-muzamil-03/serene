@@ -35,7 +35,16 @@ Angular offers powerful capabilities, but it lacks a built-in starter kit with m
 
 ## 🖼️ Screenshots
 
-_Add screenshots or GIFs here if available._
+![Login page](images/login.png)
+![Register page](images/register.png)
+![Recover password](images/recover-your-password.png)
+![Reset password](images/change-your-password.png)
+![Email password recovery](images/mailpit-email-password.png)
+![Dashboard](images/dashboard.png)
+![Profile 1](images/profile-with-loading-bar.png)
+![Profile 2](images/profile.png)
+![Confirm delete account](images/confirm-delete-account.png)
+
 
 ---
 
