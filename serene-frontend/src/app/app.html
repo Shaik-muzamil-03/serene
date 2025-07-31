@@ -1,0 +1,12 @@
+<!-- Loading bar -->
+<div class="fixed top-0 left-0 w-full z-50">
+  <div
+    *ngIf="loadingService.loading$ | async"
+    class="h-0.5 bg-blue-500"
+  ></div>
+</div>
+
+<!-- Main layout -->
+<div class="min-h-screen bg-gray-100 dark:bg-gray-900">
+  <router-outlet />
+</div>

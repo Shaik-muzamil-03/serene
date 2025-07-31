@@ -1,0 +1,14 @@
+<input
+  [id]="id"
+  [type]="type"
+  [name]="name || id"
+  [placeholder]="placeholder"
+  [value]="value"
+  (input)="handleInput($event)"
+  (blur)="onTouched()"
+  autocomplete="given-name"
+  [class]="
+    'p-2 mt-1 w-full border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300 shadow-sm ' +
+    class
+  "
+/>

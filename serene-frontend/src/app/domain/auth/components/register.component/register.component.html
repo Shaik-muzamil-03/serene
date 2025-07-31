@@ -1,0 +1,72 @@
+<h2 class="mb-4 text-lg text-gray-900 dark:text-white">
+  Register
+</h2>
+
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="mt-6 space-y-4">
+  <div>
+    <app-input-label for="name" text="Name" />
+    <app-text-input formControlName="name" type="text" id="name" name="name"/>
+    <div
+      *ngIf="submitted && formGroup.get('name')?.invalid"
+      class="text-sm text-red-600 dark:text-red-400 mt-2"
+    >
+      Invalid name
+    </div>
+  </div>
+
+  <div>
+    <app-input-label for="email" text="Email" />
+    <app-text-input formControlName="email" type="email" id="email" name="email"/>
+    <div
+      *ngIf="submitted && formGroup.get('email')?.invalid"
+      class="text-sm text-red-600 dark:text-red-400 mt-2"
+    >
+      Invalid email
+    </div>
+  </div>
+
+  <div>
+    <app-input-label for="password" text="Password" />
+    <app-text-input formControlName="password" type="password" id="password" name="password"/>
+    <div
+      *ngIf="submitted && formGroup.get('password')?.invalid"
+      class="text-sm text-red-600 dark:text-red-400 mt-2"
+    >
+      Password is required
+    </div>
+  </div>
+
+  <div>
+    <app-input-label for="confirmPassword" text="Confirm Password" />
+    <app-text-input formControlName="confirmPassword" type="password" id="confirmPassword" name="confirmPassword"/>
+    <div
+      *ngIf="submitted && formGroup.get('confirmPassword')?.invalid"
+      class="text-sm text-red-600 dark:text-red-400 mt-2"
+    >
+      Confirm password is required
+    </div>
+    <div
+      *ngIf="submitted && formGroup.errors?.['passwordMismatch']"
+      class="text-sm text-red-600 dark:text-red-400 mt-2"
+    >
+      Passwords do not match
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between gap-2">
+    <a
+      [routerLink]="['/login']"
+      class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800 font-medium"
+    >
+      Already registered?
+    </a>
+
+    <app-primary-button type="submit"> Register </app-primary-button>
+  </div>
+  <div
+    *ngIf="submitted && errorMessage"
+    class="text-sm text-red-600 dark:text-red-400 mt-2"
+  >
+    {{ errorMessage }}
+  </div>
+</form>

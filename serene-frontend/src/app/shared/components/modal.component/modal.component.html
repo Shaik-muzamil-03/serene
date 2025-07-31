@@ -1,0 +1,21 @@
+@if (show) {
+<!-- Backdrop -->
+<div class="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+  <!-- Modal box -->
+  <div
+    class="relative bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-xl w-full max-w-xl mx-4 p-4"
+  >
+    <!-- Close button -->
+    <button
+      class="absolute top-3 right-3 text-gray-500 dark:text-gray-300 hover:text-black dark:hover:text-white text-xl cursor-pointer px-2 dark:hover:bg-gray-900 hover:bg-gray-200"
+      (click)="close()"
+      aria-label="Close"
+    >
+      &times;
+    </button>
+
+    <!-- Dynamic content -->
+    <ng-content></ng-content>
+  </div>
+</div>
+}

@@ -1,0 +1,70 @@
+<h2 class="mb-4 text-lg text-gray-900 dark:text-white">Log in</h2>
+
+<form [formGroup]="formGroup" (ngSubmit)="onSubmit()" class="mt-6 space-y-4">
+  <div>
+    <app-input-label for="email" text="Email" />
+    <app-text-input
+      formControlName="email"
+      type="email"
+      id="email"
+      name="email"
+    />
+    <div
+      *ngIf="submitted && formGroup.get('email')?.invalid"
+      class="text-sm text-red-600 dark:text-red-400 mt-2"
+    >
+      Invalid email
+    </div>
+  </div>
+
+  <div>
+    <app-input-label for="password" text="Password" />
+    <app-text-input
+      formControlName="password"
+      type="password"
+      id="password"
+      name="password"
+    />
+    <div
+      *ngIf="submitted && formGroup.get('password')?.invalid"
+      class="text-sm text-red-600 dark:text-red-400 mt-2"
+    >
+      Password is required
+    </div>
+  </div>
+
+  <div class="flex items-center justify-between">
+    <div
+      class="flex gap-2 items-center text-sm font-medium text-gray-500 dark:text-gray-400"
+    >
+      <div>Not registed?</div>
+      <div>
+        <a
+          [routerLink]="['/register']"
+          class="underline text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
+        >
+          Create an account
+        </a>
+      </div>
+    </div>
+    <app-primary-button [type]="'submit'">Login</app-primary-button>
+  </div>
+
+  <hr class="my-2 h-px border-0 bg-gray-300" />
+
+  <div>
+    <a
+      [routerLink]="['/recover-password']"
+      class="font-medium text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-100 dark:focus:ring-offset-gray-800"
+    >
+      Forgot your password?
+    </a>
+  </div>
+
+  <div
+    *ngIf="submitted && errorMessage"
+    class="text-sm text-red-600 dark:text-red-400 mt-2"
+  >
+    {{ errorMessage }}
+  </div>
+</form>

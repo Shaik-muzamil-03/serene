@@ -1,0 +1,67 @@
+<div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow">
+  <div class="max-w-xl">
+    <section>
+      <header>
+        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+          Profile Information
+        </h2>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          Update your account's profile information and email address. Ensure
+          your account is using a long, random password to stay secure.
+        </p>
+      </header>
+      <form
+        [formGroup]="formGroup"
+        (ngSubmit)="onSubmit()"
+        class="mt-6 space-y-4"
+      >
+        <div>
+          <app-input-label for="name" text="Name" />
+          <app-text-input
+            formControlName="name"
+            type="text"
+            id="name"
+            name="name"
+          />
+          <div
+            *ngIf="submitted && formGroup.get('name')?.invalid"
+            class="text-sm text-red-600 dark:text-red-400 mt-2"
+          >
+            Invalid name
+          </div>
+        </div>
+        <div>
+          <app-input-label for="email" text="Email" />
+          <app-text-input
+            formControlName="email"
+            type="email"
+            id="email"
+            name="email"
+          />
+          <div
+            *ngIf="submitted && formGroup.get('email')?.invalid"
+            class="text-sm text-red-600 dark:text-red-400 mt-2"
+          >
+            Invalid email
+          </div>
+        </div>
+        <div class="flex items-center gap-4">
+          <app-primary-button type="submit">Save</app-primary-button>
+        </div>
+        <div
+          *ngIf="successMessage"
+          class="text-green-600 dark:text-green-400 text-sm mt-2"
+        >
+          {{ successMessage }}
+        </div>
+
+        <div
+          *ngIf="errorMessage"
+          class="text-sm text-red-600 dark:text-red-400 mt-2"
+        >
+          {{ errorMessage }}
+        </div>
+      </form>
+    </section>
+  </div>
+</div>

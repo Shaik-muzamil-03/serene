@@ -1,0 +1,87 @@
+<div class="p-4 sm:p-8 bg-white dark:bg-gray-800 shadow">
+  <div class="max-w-xl">
+    <section>
+      <header>
+        <h2 class="text-lg font-medium text-gray-900 dark:text-gray-100">
+          Delete Account
+        </h2>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          Once your account is deleted, all of its resources and data will be
+          permanently deleted. before deleting your account, please download any
+          data or information that you wish to retain.
+        </p>
+      </header>
+
+      <!-- Confirm Delete Modal -->
+      <app-modal [show]="showDeleteModal" (onClose)="closeDeleteAccountModal()">
+        <h2 class="text-xl font-semibold mb-4">
+          Are you sure you want to delete your account?
+        </h2>
+        <p class="mt-1 text-sm text-gray-600 dark:text-gray-400">
+          Once your account is deleted, all of its resources and data will be
+          permanently deleted. please enter your password to confirm you would
+          like to permanently delete your account.
+        </p>
+        <form
+          [formGroup]="formGroup"
+          (ngSubmit)="onSubmit()"
+          class="mt-6 space-y-4"
+        >
+          <div>
+            <app-input-label for="currentPassword" text="Password" />
+            <app-text-input
+              formControlName="currentPassword"
+              type="password"
+              id="currentPassword"
+              name="currentPassword"
+            />
+            <div
+              *ngIf="submitted && formGroup.get('currentPassword')?.invalid"
+              class="text-sm text-red-600 dark:text-red-400 mt-2"
+            >
+              Password is required
+            </div>
+          </div>
+
+          <div
+            *ngIf="
+              submitted &&
+              formGroup.get('currentPassword')?.valid &&
+              errorMessage
+            "
+            class="text-sm text-red-600 dark:text-red-400 mt-2"
+          >
+            {{ errorMessage }}
+          </div>
+
+          <div class="flex justify-end gap-3">
+            <app-primary-button
+              [variant]="'secondary'"
+              [type]="'button'"
+              (click)="closeDeleteAccountModal()"
+            >
+              Cancel
+            </app-primary-button>
+            <app-primary-button
+              [variant]="'danger'"
+              [type]="'submit'"
+              [disabled]="isDeleting"
+            >
+              Delete account
+            </app-primary-button>
+          </div>
+        </form>
+      </app-modal>
+
+      <div class="pt-4">
+        <app-primary-button
+          [type]="'button'"
+          [variant]="'danger'"
+          (click)="openDeleteAccountModal()"
+        >
+          Delete Account
+        </app-primary-button>
+      </div>
+    </section>
+  </div>
+</div>
