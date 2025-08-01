@@ -96,7 +96,7 @@ spring.mail.properties.mail.smtp.auth=false
 spring.mail.properties.mail.smtp.starttls.enable=false
 ```
 
-📦 Main Dependencies (pom.xml)
+## 📦 Main Dependencies (pom.xml)
 
 * `spring-boot-starter-web`
 * `spring-boot-starter-security`
@@ -106,7 +106,7 @@ spring.mail.properties.mail.smtp.starttls.enable=false
 * `mysql-connector-j`
 * `spring-boot-docker-compose`
 
-✉️ Email Testing with Mailpit
+## ✉️ Email Testing with Mailpit
 
 No SMTP credentials required. Serene uses Mailpit for local email testing.
 

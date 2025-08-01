@@ -1,6 +1,6 @@
 # Serene
 
-**Serene** is a modern StarterKit for full-stack web development using **Spring Boot** and **Angular**. Inspired by [Laravel Breeze](https://laravel.com/docs/breeze), it provides a **clean**, **secure**, and **minimalist** foundation so you can focus on building features — not spending time on initial configuration.
+**Serene** is a modern StarterKit for full-stack web development using **Spring Boot** and **Angular**. Inspired by Laravel Breeze, it provides a **clean**, **secure**, and **minimalist** foundation so you can focus on building features — not spending time on initial configuration.
 
 ---
 
