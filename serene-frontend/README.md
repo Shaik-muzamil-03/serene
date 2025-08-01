@@ -52,13 +52,11 @@ ng build
 ```
 
 ## ❤️ Support
-If Serene has saved you time or helped you build more efficiently, consider supporting the project by:
+Found **Serene** useful? You can support my work in a few simple ways:
 
-* Giving a ⭐️ on GitHub
-* Sharing it with other developers
-* Making a small donation
-
-Thank you!
+- ⭐️ Star the repo on [GitHub](https://github.com/https://github.com/ClaudioAlcantaraR/serene)
+- 🔗 Share it with other devs who might need a solid starter kit
+- ☕️ [Buy me a coffee](https://buymeacoffee.com/claudiodev) — every donation helps me keep building!
 
 
 ## 📄 License
