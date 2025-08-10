@@ -18,6 +18,8 @@ export class ResetPasswordPageComponent {
   submitted: boolean = false;
   token: string = '';
   successMessage: string | null = null;
+  visibilityResetPwd:string = "password";
+  visibilityConfirmPwd:string = "password";
 
   constructor(
     private formBuilder: FormBuilder,
@@ -66,6 +68,24 @@ export class ResetPasswordPageComponent {
         this.changeDetectorRef.detectChanges();
       }
     });
+  }
+
+  visibilityToggleResetPwd(){
+     if(this.visibilityResetPwd === 'password'){
+      this.visibilityResetPwd = 'text';
+    }
+    else if(this.visibilityResetPwd === 'text') {
+       this.visibilityResetPwd = 'password';
+    }
+  }
+
+  visibilityToggleConfirmPwd(){
+     if(this.visibilityConfirmPwd === 'password'){
+      this.visibilityConfirmPwd = 'text';
+    }
+    else if(this.visibilityConfirmPwd === 'text') {
+       this.visibilityConfirmPwd = 'password';
+    }
   }
 
 }

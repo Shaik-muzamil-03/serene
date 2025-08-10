@@ -18,6 +18,7 @@ export class LoginComponent {
     formGroup: FormGroup;
     errorMessage: string | null = null;
     submitted: boolean = false;
+    visiblityLoginPassword:string = "password";
 
     constructor(
         private formBuilder: FormBuilder,
@@ -60,5 +61,14 @@ export class LoginComponent {
                 console.error(err);
             }
         });
+    }
+
+    visiblityPassword(){
+        if(this.visiblityLoginPassword === 'password'){
+        this.visiblityLoginPassword = 'text';
+        }
+        else if(this.visiblityLoginPassword === 'text') {
+        this.visiblityLoginPassword = 'password';
+        }
     }
 }

@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+.eye-icon-position {
+  position: relative;
+  left: 95%;
+  bottom: 33px;
+  cursor: pointer;
+}
+
+.eye-icon-position-login {
+  position: relative;
+  left: 93%;
+  bottom: 33px;
+  cursor: pointer;
+}
+

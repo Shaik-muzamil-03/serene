@@ -15,7 +15,7 @@ public class MailService {
 
     public void send(String to, String subject, String body) {
         SimpleMailMessage message = new SimpleMailMessage();
-        message.setFrom("test@test.com"); // Default dummy email for testing. Replace this email for production
+        message.setFrom("alhaytham.stores@gmail.com"); // Default dummy email for testing. Replace this email for production
         message.setTo(to);
         message.setSubject(subject);
         message.setText(body);

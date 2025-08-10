@@ -17,6 +17,8 @@ export class RegisterComponent {
   formGroup: FormGroup
   errorMessage: string | null = null;
   submitted: boolean = false;
+  visiblityRigisterPwd:string = "password";
+  visiblityRigisterConfirmPwd:string = "password";
 
   constructor(
     private formBuilder: FormBuilder,
@@ -73,5 +75,23 @@ export class RegisterComponent {
         console.error(err);
       }
     });
+  }
+
+  visiblityToggleRegisterPwd(){
+        if(this.visiblityRigisterPwd === 'password'){
+          this.visiblityRigisterPwd = 'text';
+        }
+        else if(this.visiblityRigisterPwd === 'text') {
+          this.visiblityRigisterPwd = 'password';
+        }
+  }
+
+  visiblityToggleRegisterConfirmPwd(){
+        if(this.visiblityRigisterConfirmPwd === 'password'){
+          this.visiblityRigisterConfirmPwd = 'text';
+        }
+        else if(this.visiblityRigisterConfirmPwd === 'text') {
+          this.visiblityRigisterConfirmPwd = 'password';
+        }
   }
 }

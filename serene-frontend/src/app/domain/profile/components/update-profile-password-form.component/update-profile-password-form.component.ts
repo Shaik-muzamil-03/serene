@@ -18,6 +18,9 @@ export class UpdateProfilePasswordFormComponent {
   errorMessage: string | null = null;
   successMessage: string | null = null;
   submitted: boolean = false;
+  visibilityTextCurrent : string = "password"
+  visibilityTextNew : string = "password"
+  visibilityTextConfirm : string = "password"
 
   constructor(
     private profileService: ProfileService,
@@ -83,6 +86,33 @@ export class UpdateProfilePasswordFormComponent {
         console.error(err);
       }
     });
+  }
+
+  visibiltyToggleCurrent(){
+    if(this.visibilityTextCurrent === 'password'){
+      this.visibilityTextCurrent = 'text';
+    }
+    else if(this.visibilityTextCurrent === 'text') {
+       this.visibilityTextCurrent = 'password';
+    }
+  }
+
+  visibiltyToggleNew(){
+    if(this.visibilityTextNew === 'password'){
+      this.visibilityTextNew = 'text';
+    }
+    else if(this.visibilityTextNew === 'text') {
+       this.visibilityTextNew = 'password';
+    }
+  }
+
+   visibiltyToggleConfirm(){
+    if(this.visibilityTextConfirm === 'password'){
+      this.visibilityTextConfirm = 'text';
+    }
+    else if(this.visibilityTextConfirm === 'text') {
+       this.visibilityTextConfirm = 'password';
+    }
   }
 
 }
