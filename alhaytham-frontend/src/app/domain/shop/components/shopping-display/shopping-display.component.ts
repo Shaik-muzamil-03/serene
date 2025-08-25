@@ -44,4 +44,12 @@ export class ShoppingDisplay implements OnInit {
       this.isSideView = !this.isSideView
   }
 
+  buyItem(event : Event){
+      event.stopPropagation();
+  }
+
+  addToCart(event : Event){
+      event.stopPropagation();
+  }
+
 }

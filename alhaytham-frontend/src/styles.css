@@ -33,3 +33,10 @@
   border-radius: 4px;
 }
 
+.transition-grid-cols {
+  transition-property: grid-template-columns;
+  transition-duration: 500ms;
+  transition-timing-function: ease-in-out;
+}
+
+
