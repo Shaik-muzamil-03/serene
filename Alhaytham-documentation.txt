@@ -1,0 +1,13 @@
+Roles:
+User
+Administrator
+
+Bugs Reported:
+Logout issue - 403 forbidden response not frequent
+
+
+
+Development:
+Added pwd visibility toggle
+Added custom logo Alhaytham
+Added hero page

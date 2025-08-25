@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300&display=swap');
+@import "tailwindcss";
+
+.eye-icon-position {
+  position: relative;
+  left: 95%;
+  bottom: 33px;
+  cursor: pointer;
+}
+
+.eye-icon-position-login {
+  position: relative;
+  left: 93%;
+  bottom: 33px;
+  cursor: pointer;
+}
+
+.font-g-teko {
+   font-family: "Teko", sans-serif;
+}
+
+.scrollbar-custom::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+.scrollbar-custom::-webkit-scrollbar-track {
+  background: #e3e2e217;
+}
+
+.scrollbar-custom::-webkit-scrollbar-thumb {
+  background-color: #f1f1f176; /* Tailwind blue-500 */
+  border-radius: 4px;
+}
+

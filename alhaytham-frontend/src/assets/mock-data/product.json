@@ -1,0 +1,44 @@
+[
+    {
+    "id":1,
+    "productName":"Fine Wine T-shirt",
+    "description":"black T-shirt with Old Soul Fine Wine",
+    "price":"20",
+    "imageUrl":"http://localhost:4200/assets/FINE-WINE-MOCK-UP-DESIGN-B-Photoroom.png"
+    },
+    {
+    "id":2,
+    "productName":"Fine Wine T-shirt",
+    "description":"black T-shirt with Old Soul Fine Wine",
+    "price":"20",
+    "imageUrl":"http://localhost:4200/assets/FINE-WINE-MOCK-UP-DESIGN-B-Photoroom.png"
+    },
+    {
+    "id":3,
+    "productName":"Fine Wine T-shirt",
+    "description":"black T-shirt with Old Soul Fine Wine",
+    "price":"20",
+    "imageUrl":"http://localhost:4200/assets/FINE-WINE-MOCK-UP-DESIGN-B-Photoroom.png"
+    },
+    {
+    "id":4,
+    "productName":"Fine Wine T-shirt",
+    "description":"black T-shirt with Old Soul Fine Wine",
+    "price":"20",
+    "imageUrl":"http://localhost:4200/assets/FINE-WINE-MOCK-UP-DESIGN-B-Photoroom.png"
+    },
+    {
+    "id":5,
+    "productName":"Fine Wine T-shirt",
+    "description":"black T-shirt with Old Soul Fine Wine",
+    "price":"20",
+    "imageUrl":"http://localhost:4200/assets/FINE-WINE-MOCK-UP-DESIGN-B-Photoroom.png"
+    },
+    {
+    "id":6,
+    "productName":"Fine Wine T-shirt",
+    "description":"black T-shirt with Old Soul Fine Wine",
+    "price":"20",
+    "imageUrl":"http://localhost:4200/assets/FINE-WINE-MOCK-UP-DESIGN-B-Photoroom.png"
+    }
+]

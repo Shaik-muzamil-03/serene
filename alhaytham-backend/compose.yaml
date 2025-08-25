@@ -1,0 +1,34 @@
+version: '3.8'
+
+services:
+  mysql:
+    image: mysql:8.3
+    container_name: alhaytham-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_DATABASE: serene
+      MYSQL_USER: serene_user
+      MYSQL_PASSWORD: secret
+      MYSQL_ROOT_PASSWORD: secret
+    ports:
+      - '3306:3306'
+    volumes:
+      - alhaytham_mysql_data:/var/lib/mysql
+    networks:
+      - alhaytham-network
+
+  mailpit:
+    image: axllent/mailpit
+    container_name: alhaytham-mailpit
+    restart: unless-stopped
+    ports:
+      - '8025:8025'   # Web interface
+      - '1025:1025'   # SMTP Port
+    networks:
+      - alhaytham-network
+
+volumes:
+  alhaytham_mysql_data:
+
+networks:
+  alhaytham-network:
